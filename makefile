@@ -359,9 +359,6 @@ OS := $(patsubst sn%,UNICOS-sn,$(OS))
 
 CPU := $(shell uname -m | sed 's/[\/ ]/-/g')
 
-SVNURL := $(shell svn info | grep '^URL:' | sed 's/URL: //')
-SVNREV := $(shell svn info | grep '^Revision:' | sed 's/Revision: //')
-
 ROOTDIR := $(shell pwd)
 
 ifndef FORT

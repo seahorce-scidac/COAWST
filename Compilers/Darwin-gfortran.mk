@@ -43,7 +43,7 @@
               CXX := g++
            CFLAGS :=
          CXXFLAGS :=
-           INCDIR := /usr/include /usr/local/bin
+           INCDIR := /usr/local/include
             SLIBS := -L/usr/local/lib -L/usr/lib
             ULIBS :=
              LIBS :=
@@ -127,7 +127,7 @@ endif
 
 ifdef USE_NETCDF4
         NF_CONFIG ?= nf-config
-    NETCDF_INCDIR ?= $(shell $(NF_CONFIG) --prefix)/include
+    NETCDF_INCDIR ?= /usr/local/include
              LIBS += $(shell $(NF_CONFIG) --flibs)
            INCDIR += $(NETCDF_INCDIR) $(INCDIR)
 else
