@@ -61,7 +61,7 @@ endif
 #  the .h extension. For example, the upwelling application includes the
 #  "upwelling.h" header file.
 
-ROMS_APPLICATION ?= SHOREFACE
+ROMS_APPLICATION ?= UPWELLING
 
 #  If application header files is not located in "ROMS/Include",
 #  provide an alternate directory FULL PATH.
@@ -141,7 +141,7 @@ MY_CPP_FLAGS ?=
 #  NetCDF and so on.
 #--------------------------------------------------------------------------
 
-        FORT ?= pgi
+        FORT ?= gfortran
 
 #--------------------------------------------------------------------------
 #  Set directory for executable.
