@@ -591,14 +591,14 @@ libraries: $(libraries)
 .PHONY: mct_params
 
 mct_params:
-	$(shell $(TEST) -d $(SCRATCH_DIR) || $(MKDIR) $(SCRATCH_DIR) )                               \
-	cd $(SCRATCH_DIR);                                                                           \
-	cpp -P $(ROMS_CPPFLAGS) -I$(MY_ROMS_SRC)/ROMS/Include $(MY_ROMS_SRC)/Master/MCT_coupler/mod_coupler_kinds.F > mod_coupler_kinds.f90; \
-	$(MY_ROMS_SRC)/$(CLEAN) mod_coupler_kinds.f90;                                                              \
-	$(FC) -c $(FFLAGS) mod_coupler_kinds.f90;                                                  \
-	cpp -P $(ROMS_CPPFLAGS) -I$(MY_ROMS_SRC)/ROMS/Include $(MY_ROMS_SRC)/Master/MCT_coupler/mct_coupler_params.F > mct_coupler_params.f90; \
-	$(MY_ROMS_SRC)/$(CLEAN) mct_coupler_params.f90;                                                             \
-	$(FC) -c $(FFLAGS) mct_coupler_params.f90;
+#	$(shell $(TEST) -d $(SCRATCH_DIR) || $(MKDIR) $(SCRATCH_DIR) )                               \
+#	cd $(SCRATCH_DIR);                                                                           \
+#	cpp -P $(ROMS_CPPFLAGS) -I$(MY_ROMS_SRC)/ROMS/Include $(MY_ROMS_SRC)/Master/MCT_coupler/mod_coupler_kinds.F > mod_coupler_kinds.f90; \
+#	$(MY_ROMS_SRC)/$(CLEAN) mod_coupler_kinds.f90;                                                              \
+#	$(FC) -c $(FFLAGS) mod_coupler_kinds.f90;                                                  \
+#	cpp -P $(ROMS_CPPFLAGS) -I$(MY_ROMS_SRC)/ROMS/Include $(MY_ROMS_SRC)/Master/MCT_coupler/mct_coupler_params.F > mct_coupler_params.f90; \
+#	$(MY_ROMS_SRC)/$(CLEAN) mct_coupler_params.f90;                                                             \
+#	$(FC) -c $(FFLAGS) mct_coupler_params.f90;
 
 #--------------------------------------------------------------------------
 #  Build WW3.

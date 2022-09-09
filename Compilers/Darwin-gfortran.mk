@@ -262,9 +262,9 @@ endif
 # Model coupling specific rules.
 #--------------------------------------------------------------------------
 
-ifndef USE_SCRIP
-             LIBS += $(MCT_PARAMS_DIR)/mct_coupler_params.o
-endif
+#ifndef USE_SCRIP
+#             LIBS += $(MCT_PARAMS_DIR)/mct_coupler_params.o
+#endif
 
 ifdef USE_WW3
              FFLAGS += -frecord-marker=4 -fconvert=big-endian
