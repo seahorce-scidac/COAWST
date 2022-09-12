@@ -201,8 +201,8 @@ export   NETCDF_CONFIG=/usr/bin/nf-config
 # out. Any string value (including off) will evaluate to TRUE in
 # conditional if-statements.
 
- export           USE_MPI=              # distributed-memory parallelism
- export        USE_MPIF90=              # compile with mpif90 script
+ export           USE_MPI=on            # distributed-memory parallelism
+ export        USE_MPIF90=on            # compile with mpif90 script
 #export         which_MPI=mpich         # compile with MPICH library
 #export         which_MPI=mpich2        # compile with MPICH2 library
  export         which_MPI=openmpi       # compile with OpenMPI library

@@ -220,7 +220,7 @@ ifdef CICE_APPLICATION
 endif
 
 ifndef USE_SCRIP
-             LIBS += $(MCT_PARAMS_DIR)/mct_coupler_params.o
+#             LIBS += $(MCT_PARAMS_DIR)/mct_coupler_params.o
 endif
 
 ifdef USE_WW3
