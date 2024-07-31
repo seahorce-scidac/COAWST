@@ -1047,9 +1047,9 @@
       IF (NSperiodic(ng)) THEN
         DO i=IstrT,IendT
           IF (i.le.Lm(ng)/2) THEN
-            val1=REAL(i,r8)
+            val1=REAL(i,r8)-0.5
           ELSE
-            val1=REAL(Lm(ng)+1-i,r8)
+            val1=REAL(Lm(ng)+1-i,r8)-0.5
           END IF
           val2=MIN(depth,84.5_r8+66.526_r8*TANH((val1-10.0_r8)/7.0_r8))
           DO j=JstrT,JendT
@@ -1059,9 +1059,9 @@
       ELSE IF (EWperiodic(ng)) THEN
         DO j=JstrT,JendT
           IF (j.le.Mm(ng)/2) THEN
-            val1=REAL(j,r8)
+            val1=REAL(j,r8)-0.5
           ELSE
-            val1=REAL(Mm(ng)+1-j,r8)
+            val1=REAL(Mm(ng)+1-j,r8)-0.5
           END IF
           val2=MIN(depth,84.5_r8+66.526_r8*TANH((val1-10.0_r8)/7.0_r8))
           DO i=IstrT,IendT
